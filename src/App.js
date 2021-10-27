@@ -1,13 +1,21 @@
+// routes
+import Router from './routes';
+// theme
+import ThemeConfig from './theme';
+import GlobalStyles from './theme/globalStyles';
+// components
+import ScrollToTop from './components/ScrollToTop';
+import { BaseOptionChartStyle } from './components/charts/BaseOptionChart';
 
-import './App.css';
+// ----------------------------------------------------------------------
 
-
-function App() {
+export default function App() {
   return (
-    <div>
-      Hi and welcome to CMS API Frontend!
-    </div>
+    <ThemeConfig>
+      <ScrollToTop />
+      <GlobalStyles />
+      <BaseOptionChartStyle />
+      <Router />
+    </ThemeConfig>
   );
 }
-
-export default App;
